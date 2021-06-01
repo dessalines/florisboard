@@ -171,7 +171,7 @@ class KeyboardState private constructor(var value: ULong, var maskOfInterest: UL
 
     var keyboardMode: KeyboardMode
         get() = KeyboardMode.fromInt(getRegion(M_KEYBOARD_MODE, O_KEYBOARD_MODE))
-        set(v) { setRegion(M_KEY_VARIATION, O_KEY_VARIATION, v.toInt()) }
+        set(v) { setRegion(M_KEYBOARD_MODE, O_KEYBOARD_MODE, v.toInt()) }
 
     var caps: Boolean
         get() = getFlag(F_CAPS)
